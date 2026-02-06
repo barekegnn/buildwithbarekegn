@@ -1,19 +1,21 @@
+'use client';
+
+import { useState } from 'react';
 import { Metadata } from 'next';
 import { getAllSkillCategories } from '@/lib/skills';
-import { SkillsGroup } from '@/components/sections/SkillsGroup';
-
-export const metadata: Metadata = {
-  title: 'Skills',
-  description: 'Full-stack engineering skills spanning frontend development with React and Next.js, backend systems with Node.js and Express, database design with MongoDB and Firebase, authentication systems, system architecture, and DevOps practices.',
-  openGraph: {
-    title: 'Skills | Barekegn Asefa - Systems Engineer',
-    description: 'Full-stack engineering skills spanning frontend development with React and Next.js, backend systems with Node.js and Express, database design with MongoDB and Firebase, authentication systems, system architecture, and DevOps practices.',
-    type: 'website',
-  },
-};
+import { Badge } from '@/components/ui';
 
 export default function SkillsPage() {
   const skillCategories = getAllSkillCategories();
+  const [activeFilter, setActiveFilter] = useState<string>('All');
+
+  // Get all unique categories
+  const categories = ['All', ...skillCategories.map(cat => cat.category)];
+
+  // Filter skills based on active category
+  const filteredSkills = activeFilter === 'All' 
+    ? skillCategories.flatMap(cat => cat.skills)
+    : skillCategories.find(cat => cat.category === activeFilter)?.skills || [];
 
   return (
     <main className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -21,15 +23,64 @@ export default function SkillsPage() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            Technical <span className="text-gradient">Skills</span>
+            Tech <span className="text-gradient">Stack</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Full-stack engineering expertise demonstrated across production projects
+            Modern technologies I use to build exceptional products
           </p>
         </div>
 
-        {/* Skills Summary Cards - Compact */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveFilter(category)}
+              className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                activeFilter === category
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                  : 'bg-gray-800/50 text-gray-400 hover:text-white hover:bg-gray-800'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Skills Grid - Badge Style */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {filteredSkills.map((skill, index) => (
+            <div
+              key={index}
+              className="group relative"
+            >
+              <div className="flex items-center gap-2 px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-700/50 hover:border-blue-500/50 hover:bg-gray-800 transition-all duration-200 cursor-pointer">
+                {skill.icon && (
+                  <span className="text-xl">{skill.icon}</span>
+                )}
+                <span className="text-sm font-medium text-gray-300 group-hover:text-white">
+                  {skill.name}
+                </span>
+                {skill.yearsOfExperience && (
+                  <span className="text-xs text-blue-400 ml-1">
+                    {skill.yearsOfExperience}y
+                  </span>
+                )}
+              </div>
+
+              {/* Tooltip on Hover */}
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-xs text-gray-300 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10">
+                {skill.description}
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
+                  <div className="border-4 border-transparent border-t-gray-900"></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Stats Summary */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="glass-panel p-4 text-center">
             <div className="text-2xl font-bold text-gradient mb-1">
               {skillCategories.reduce((acc, cat) => acc + cat.skills.length, 0)}
@@ -59,47 +110,6 @@ export default function SkillsPage() {
               {skillCategories.length}
             </div>
             <div className="text-xs text-gray-400">Categories</div>
-          </div>
-        </div>
-
-        {/* Skills by Category - Compact Grid */}
-        <div className="space-y-8">
-          {skillCategories.map((category, index) => (
-            <SkillsGroup
-              key={index}
-              category={category.category}
-              skills={category.skills}
-            />
-          ))}
-        </div>
-
-        {/* Learning Philosophy - Compact */}
-        <div className="mt-12 glass-panel p-6 rounded-lg">
-          <h2 className="text-xl font-bold mb-4 text-center">
-            Learning <span className="text-gradient">Philosophy</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="text-center">
-              <div className="text-3xl mb-2">🎯</div>
-              <h3 className="text-sm font-semibold mb-1">Project-Based</h3>
-              <p className="text-xs text-gray-400">
-                Skills learned through real implementations
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-2">🔄</div>
-              <h3 className="text-sm font-semibold mb-1">Continuous Growth</h3>
-              <p className="text-xs text-gray-400">
-                Always updating with latest practices
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-2">🏗️</div>
-              <h3 className="text-sm font-semibold mb-1">Production Focus</h3>
-              <p className="text-xs text-gray-400">
-                Validated through deployed systems
-              </p>
-            </div>
           </div>
         </div>
       </div>
