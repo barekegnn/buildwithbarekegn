@@ -80,7 +80,7 @@ export default function SkillsPage() {
         </div>
 
         {/* Stats Summary */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="glass-panel p-4 text-center">
             <div className="text-2xl font-bold text-gradient mb-1">
               {skillCategories.reduce((acc, cat) => acc + cat.skills.length, 0)}
@@ -110,6 +110,36 @@ export default function SkillsPage() {
               {skillCategories.length}
             </div>
             <div className="text-xs text-gray-400">Categories</div>
+          </div>
+        </div>
+
+        {/* Learning Philosophy */}
+        <div className="glass-panel p-6 rounded-lg">
+          <h2 className="text-xl font-bold mb-4 text-center">
+            Learning <span className="text-gradient">Philosophy</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="text-center">
+              <div className="text-3xl mb-2">🎯</div>
+              <h3 className="text-sm font-semibold mb-1">Project-Based</h3>
+              <p className="text-xs text-gray-400">
+                Skills learned through real implementations
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🔄</div>
+              <h3 className="text-sm font-semibold mb-1">Continuous Growth</h3>
+              <p className="text-xs text-gray-400">
+                Always updating with latest practices
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🏗️</div>
+              <h3 className="text-sm font-semibold mb-1">Production Focus</h3>
+              <p className="text-xs text-gray-400">
+                Validated through deployed systems
+              </p>
+            </div>
           </div>
         </div>
       </div>
