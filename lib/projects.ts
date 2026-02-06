@@ -111,7 +111,7 @@ export const projects: Project[] = [
         type: 'analytics',
         title: 'Exam Content Management',
         imagePath: '/images/dashboards/hu-freshman-analytics.jpg',
-        description: 'Comprehensive exam library with question banks, difficulty levels, topic categorization, and content curation tools for optimal learning.',
+        description: 'Comprehensive past exam contents organized as Mid, Final, and CoC exams based on years for easy access and preparation.',
       },
     ],
     features: [
