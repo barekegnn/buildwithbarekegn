@@ -74,7 +74,7 @@ export const projects: Project[] = [
       'Ensuring real-time synchronization across multiple concurrent users',
       'Building comprehensive audit trails for government compliance',
     ],
-    liveDemo: undefined,
+    liveDemo: 'https://government-pm-system.vercel.app',
     github: undefined,
     complexityScore: {
       authentication: 'Advanced',
@@ -157,7 +157,7 @@ export const projects: Project[] = [
       'Building engaging motivation system that drives consistent platform usage',
       'Ensuring data privacy for sensitive academic performance information',
     ],
-    liveDemo: undefined,
+    liveDemo: 'https://hu-freshman.vercel.app',
     github: undefined,
     complexityScore: {
       authentication: 'Intermediate',
@@ -240,7 +240,7 @@ export const projects: Project[] = [
       'Implementing effective spam prevention and content quality controls',
       'Balancing moderation efficiency with community self-governance',
     ],
-    liveDemo: undefined,
+    liveDemo: 'https://hu-connect.vercel.app',
     github: undefined,
     complexityScore: {
       authentication: 'Intermediate',
