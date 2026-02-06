@@ -147,47 +147,6 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* Technology Stack */}
-        <div className="glass-panel p-8 rounded-lg mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-center">
-            Technology <span className="text-gradient">Stack</span>
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div>
-              <div className="text-3xl mb-2">⚛️</div>
-              <div className="text-sm font-medium">React & Next.js</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">🟢</div>
-              <div className="text-sm font-medium">Node.js & Express</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">🍃</div>
-              <div className="text-sm font-medium">MongoDB & Firebase</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">📘</div>
-              <div className="text-sm font-medium">TypeScript</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">🎨</div>
-              <div className="text-sm font-medium">Tailwind CSS</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">🔐</div>
-              <div className="text-sm font-medium">JWT & OAuth</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">▲</div>
-              <div className="text-sm font-medium">Vercel Deployment</div>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">📦</div>
-              <div className="text-sm font-medium">Git & CI/CD</div>
-            </div>
-          </div>
-        </div>
-
         {/* Process Overview */}
         <div className="glass-panel p-8 rounded-lg mb-16">
           <h2 className="text-2xl font-bold mb-6 text-center">
