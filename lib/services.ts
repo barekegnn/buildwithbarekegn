@@ -50,7 +50,7 @@ export const services: Service[] = [
       'User Manual',
       'Test Suite',
     ],
-    timeline: '8-16 weeks',
+    timeline: '4-8 weeks',
     pricing: {
       type: 'project-based',
       range: 'Custom Quote',
@@ -110,7 +110,7 @@ export const services: Service[] = [
       'Security Audit Report',
       'Deployment Package',
     ],
-    timeline: '6-10 weeks',
+    timeline: '3-6 weeks',
     pricing: {
       type: 'project-based',
       range: 'Custom Quote',
@@ -171,7 +171,7 @@ export const services: Service[] = [
       'Launch Checklist',
       'Support Plan',
     ],
-    timeline: '6-12 weeks',
+    timeline: '2-4 weeks',
     pricing: {
       type: 'project-based',
       range: 'Custom Quote',
@@ -232,7 +232,7 @@ export const services: Service[] = [
       'Compliance Report',
       'Maintenance Plan',
     ],
-    timeline: '12-20 weeks',
+    timeline: '6-12 weeks',
     pricing: {
       type: 'project-based',
       range: 'Custom Quote',
@@ -293,7 +293,7 @@ export const services: Service[] = [
       'Deployment Package',
       'Support Documentation',
     ],
-    timeline: '8-14 weeks',
+    timeline: '4-8 weeks',
     pricing: {
       type: 'project-based',
       range: 'Custom Quote',
