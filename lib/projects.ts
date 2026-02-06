@@ -281,21 +281,33 @@ export const projects: Project[] = [
     dashboards: [
       {
         type: 'admin',
-        title: 'Commerce Administration Panel',
-        imagePath: '/images/dashboards/shopverse-admin.jpg',
-        description: 'Product management, order processing, inventory control, and sales analytics.',
+        title: 'Admin Dashboard',
+        imagePath: '/images/ShopVerse-dashboards/admin-dashboard.jpg',
+        description: 'Product management, order processing, inventory control, and sales analytics for administrators.',
       },
       {
         type: 'user',
-        title: 'Customer Shopping Interface',
-        imagePath: '/images/dashboards/shopverse-customer.jpg',
-        description: 'Product browsing, cart management, checkout process, and order history.',
+        title: 'Home & Products',
+        imagePath: '/images/ShopVerse-dashboards/home-products.jpg',
+        description: 'Product catalog browsing with categories, search, and filtering capabilities.',
       },
       {
-        type: 'analytics',
-        title: 'Sales Analytics Dashboard',
-        imagePath: '/images/dashboards/shopverse-analytics.jpg',
-        description: 'Revenue tracking, product performance, customer behavior analysis, and conversion metrics.',
+        type: 'user',
+        title: 'Shopping Cart',
+        imagePath: '/images/ShopVerse-dashboards/shoping-cart.jpg',
+        description: 'Cart management with quantity adjustments, price calculations, and checkout initiation.',
+      },
+      {
+        type: 'user',
+        title: 'Payment Method',
+        imagePath: '/images/ShopVerse-dashboards/payment-method.jpg',
+        description: 'Secure Stripe payment integration with multiple payment options and order confirmation.',
+      },
+      {
+        type: 'user',
+        title: 'Order Confirmation',
+        imagePath: '/images/ShopVerse-dashboards/order-placed.jpg',
+        description: 'Order success confirmation with order details, tracking information, and receipt.',
       },
     ],
     features: [
