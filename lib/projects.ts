@@ -8,7 +8,7 @@ export const projects: Project[] = [
     systemType: 'Institutional Project & Workflow Platform',
     organizationContext: 'Ethiopian Ministry of Innovation and Technology',
     roles: ['Admin', 'Project Manager', 'Team Member'],
-    techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Auth', 'Socket.io'],
+    techStack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT Auth', 'Socket.io'],
     architectureSummary: 'Three-tier architecture with role-based access control, real-time collaboration features, and comprehensive project lifecycle management from initiation to completion.',
     thumbnail: '/images/projects/gov-pm-thumbnail.jpg',
     dashboards: [
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     systemType: 'Academic Performance Optimization & AI Study Platform',
     organizationContext: 'Haramaya University Freshman Academic Support System',
     roles: ['Admin', 'Student'],
-    techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'AI Integration', 'Authentication System'],
+    techStack: ['React', 'Node.js', 'Express', 'Firebase', 'AI Integration', 'Authentication System'],
     architectureSummary: 'Full-stack platform with AI-powered study assistant, comprehensive exam simulation engine, and personalized learning analytics to support freshman academic success.',
     thumbnail: '/images/projects/hu-freshman-thumbnail.jpg',
     dashboards: [
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     systemType: 'Community Q&A Knowledge System',
     organizationContext: 'Haramaya University Students Platform',
     roles: ['Admin', 'Moderator', 'Student User'],
-    techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Real-time Notifications'],
+    techStack: ['React', 'Node.js', 'MySQL', 'Express', 'Real-time Notifications'],
     architectureSummary: 'Stack Overflow-inspired platform with university-specific features including course-based categorization, reputation system, and moderation workflows to maintain content quality.',
     thumbnail: '/images/projects/hu-connect-thumbnail.jpg',
     dashboards: [
