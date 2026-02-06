@@ -124,7 +124,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4">
               <div>
-                <h3 className="font-semibold">Computer Science</h3>
+                <h3 className="font-semibold">Software Engineering</h3>
                 <p className="text-sm text-gray-400">Haramaya University</p>
                 <p className="text-xs text-gray-500">Focus on Software Engineering & System Design</p>
               </div>
