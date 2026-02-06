@@ -305,6 +305,67 @@ export const services: Service[] = [
       variant: 'primary',
     },
   },
+  {
+    id: 'ai-integration',
+    title: 'AI Integration & Automation',
+    tagline: 'Intelligent solutions powered by modern AI technologies',
+    description: 'Integration of AI capabilities into your applications including ChatGPT, Claude, and other LLM APIs. Automate workflows, enhance user experiences, and build intelligent features that set you apart.',
+    features: [
+      'OpenAI GPT & Claude API integration',
+      'Custom chatbots and AI assistants',
+      'Intelligent content generation systems',
+      'AI-powered search and recommendations',
+      'Automated data processing and analysis',
+      'Natural language processing features',
+      'Cost optimization and prompt engineering',
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Use Case Discovery',
+        description: 'Identify AI opportunities and define intelligent features',
+      },
+      {
+        step: 2,
+        title: 'AI Architecture',
+        description: 'Design AI workflows, select models, and plan integrations',
+      },
+      {
+        step: 3,
+        title: 'Rapid Prototyping',
+        description: 'Build proof-of-concept and validate AI capabilities',
+      },
+      {
+        step: 4,
+        title: 'Production Implementation',
+        description: 'Develop robust AI features with error handling and monitoring',
+      },
+      {
+        step: 5,
+        title: 'Optimization & Launch',
+        description: 'Fine-tune prompts, optimize costs, and deploy to production',
+      },
+    ],
+    deliverables: [
+      'AI-Powered Features',
+      'API Integration Code',
+      'Prompt Templates',
+      'Usage Analytics',
+      'Cost Monitoring',
+      'Integration Guide',
+    ],
+    timeline: '2-6 weeks',
+    pricing: {
+      type: 'project-based',
+      range: 'Custom Quote',
+      details: 'Based on AI complexity and features',
+    },
+    cta: {
+      text: 'Explore AI Solutions',
+      href: '/contact',
+      variant: 'primary',
+    },
+  },
 ];
 
 // Utility function to get all services
