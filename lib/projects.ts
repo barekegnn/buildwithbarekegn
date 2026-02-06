@@ -109,9 +109,9 @@ export const projects: Project[] = [
       },
       {
         type: 'analytics',
-        title: 'Performance Analytics Dashboard',
+        title: 'Exam Content Management',
         imagePath: '/images/dashboards/hu-freshman-analytics.jpg',
-        description: 'Academic performance metrics, study pattern analysis, and predictive success indicators.',
+        description: 'Comprehensive exam library with question banks, difficulty levels, topic categorization, and content curation tools for optimal learning.',
       },
     ],
     features: [
