@@ -24,77 +24,62 @@ const levelLabels = {
 
 export const SkillsGroup: React.FC<SkillsGroupProps> = ({ category, skills }) => {
   return (
-    <div className="mb-12">
+    <div className="mb-8">
       {/* Category Header */}
-      <h2 className="text-2xl font-bold mb-6">
-        {category}
+      <h2 className="text-xl font-bold mb-4 flex items-center">
+        <span className="text-gradient">{category}</span>
+        <span className="ml-3 text-sm text-gray-500">({skills.length} skills)</span>
       </h2>
 
-      {/* Skills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Skills Grid - More compact, better balanced */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
-          <Card key={index} hover>
-            {/* Skill Header */}
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex items-center">
+          <Card key={index} hover className="p-4">
+            {/* Skill Header - Compact */}
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
                 {skill.icon && (
-                  <span className="text-2xl mr-3">{skill.icon}</span>
+                  <span className="text-xl">{skill.icon}</span>
                 )}
-                <h3 className="text-lg font-semibold">{skill.name}</h3>
+                <h3 className="text-base font-semibold">{skill.name}</h3>
               </div>
-              <div className={`px-2 py-1 rounded text-xs font-medium border ${levelColors[skill.level]}`}>
+              <div className={`px-2 py-0.5 rounded text-xs font-medium border ${levelColors[skill.level]}`}>
                 {levelLabels[skill.level]}
               </div>
             </div>
 
-            {/* Description */}
+            {/* Years of Experience - Prominent */}
+            {skill.yearsOfExperience && (
+              <div className="text-sm font-medium text-blue-400 mb-2">
+                {skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'} experience
+              </div>
+            )}
+
+            {/* Description - Shorter */}
             {skill.description && (
-              <p className="text-sm text-gray-400 mb-4">
+              <p className="text-xs text-gray-400 mb-3 line-clamp-2">
                 {skill.description}
               </p>
             )}
 
-            {/* Years of Experience */}
-            {skill.yearsOfExperience && (
-              <div className="text-sm text-gray-500 mb-3">
-                {skill.yearsOfExperience} {skill.yearsOfExperience === 1 ? 'year' : 'years'} of experience
-              </div>
-            )}
-
-            {/* Projects Using This Skill */}
+            {/* Projects - Compact */}
             {skill.projects.length > 0 && (
-              <div className="mb-3">
-                <div className="text-xs text-gray-500 mb-2">
-                  Used in {skill.projects.length} project{skill.projects.length !== 1 ? 's' : ''}
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {skill.projects.map((projectSlug, idx) => (
-                    <Link
-                      key={idx}
-                      href={`/projects/${projectSlug}`}
-                      className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
-                    >
-                      <Badge>{projectSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</Badge>
-                    </Link>
-                  ))}
-                </div>
+              <div className="text-xs text-gray-500 mb-2">
+                Used in {skill.projects.length} project{skill.projects.length !== 1 ? 's' : ''}
               </div>
             )}
 
-            {/* Related Skills */}
+            {/* Related Skills - Compact */}
             {skill.relatedSkills && skill.relatedSkills.length > 0 && (
-              <div>
-                <div className="text-xs text-gray-500 mb-2">Related Skills</div>
-                <div className="flex flex-wrap gap-1">
-                  {skill.relatedSkills.map((relatedSkill, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs px-2 py-1 rounded bg-gray-800/50 text-gray-400"
-                    >
-                      {relatedSkill}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-1">
+                {skill.relatedSkills.slice(0, 3).map((relatedSkill, idx) => (
+                  <span
+                    key={idx}
+                    className="text-xs px-1.5 py-0.5 rounded bg-gray-800/50 text-gray-500"
+                  >
+                    {relatedSkill}
+                  </span>
+                ))}
               </div>
             )}
           </Card>
