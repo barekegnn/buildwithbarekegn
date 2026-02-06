@@ -14,21 +14,27 @@ export const projects: Project[] = [
     dashboards: [
       {
         type: 'admin',
-        title: 'System Administration Dashboard',
-        imagePath: '/images/dashboards/gov-pm-admin.jpg',
-        description: 'Complete system oversight with user management, project approval workflows, and system-wide analytics.',
+        title: 'System Overview Dashboard',
+        imagePath: '/images/Mint-dashboards/gov-pm-admin.jpg',
+        description: 'Complete system metrics with active users, total projects, budget tracking, and project status visualization. Includes quick actions and recent activity feed.',
+      },
+      {
+        type: 'analytics',
+        title: 'Analytics Dashboard',
+        imagePath: '/images/Mint-dashboards/gov-pm-analytics.jpg',
+        description: 'Advanced analytics with project status distribution, manager performance metrics, completion rates, and comprehensive project insights.',
       },
       {
         type: 'manager',
-        title: 'Project Manager Dashboard',
-        imagePath: '/images/dashboards/gov-pm-manager.jpg',
-        description: 'Project tracking, team coordination, resource allocation, and milestone management interface.',
+        title: 'Budget Management Dashboard',
+        imagePath: '/images/Mint-dashboards/gov-pm-budget.jpg',
+        description: 'Financial oversight with total budget tracking, expense analysis, savings opportunities, and budget distribution across project statuses.',
       },
       {
         type: 'user',
-        title: 'Team Member Dashboard',
-        imagePath: '/images/dashboards/gov-pm-user.jpg',
-        description: 'Task management, progress reporting, and collaboration workspace for team members.',
+        title: 'Project Manager Dashboard',
+        imagePath: '/images/Mint-dashboards/gov-pm-manager.jpg',
+        description: 'Task progress tracking with completion metrics, managed projects overview, and real-time project status monitoring.',
       },
     ],
     features: [
