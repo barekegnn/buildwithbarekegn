@@ -170,12 +170,12 @@ export const projects: Project[] = [
   {
     title: 'HU Connect – University Knowledge Platform',
     slug: 'hu-connect',
-    description: 'Community-driven Q&A knowledge system for Haramaya University students, featuring reputation-based voting, content moderation, real-time notifications, and collaborative problem-solving.',
+    description: 'Professional community-driven Q&A platform designed specifically for Haramaya University students, empowering freshers to find trustworthy guidance on university life, academics, and campus navigation directly from experienced seniors and peers.',
     systemType: 'Community Q&A Knowledge System',
     organizationContext: 'Haramaya University Students Platform',
     roles: ['Admin', 'Moderator', 'Student User'],
     techStack: ['React', 'Node.js', 'MySQL', 'Express', 'Real-time Notifications'],
-    architectureSummary: 'Stack Overflow-inspired platform with university-specific features including course-based categorization, reputation system, and moderation workflows to maintain content quality.',
+    architectureSummary: 'Modern Q&A platform with peer-verified answers, smart categorization, reputation system, and real-time notifications to bridge the knowledge gap between freshers and experienced students.',
     thumbnail: '/images/projects/hu-connect-thumbnail.jpg',
     dashboards: [
       {
@@ -199,28 +199,28 @@ export const projects: Project[] = [
     ],
     features: [
       {
-        title: 'Q&A Engine',
-        description: 'Post questions, provide answers, and engage in threaded discussions with rich text formatting and code snippets.',
+        title: 'Peer-Verified Q&A',
+        description: 'Ask questions and get answers from students who have been there, with accepted answers to reward top contributors.',
         category: 'collaboration',
       },
       {
-        title: 'Voting & Reputation System',
-        description: 'Community-driven quality control through upvotes/downvotes and reputation-based privileges.',
+        title: 'Smart Categorization',
+        description: 'Tag questions by department or topic (Academics, Campus Life, Side Hustles) for easy discovery and navigation.',
         category: 'management',
       },
       {
-        title: 'Content Moderation',
-        description: 'Multi-level moderation system with flagging, review workflows, and automated spam detection.',
+        title: 'Voting & Reputation System',
+        description: 'Community-driven quality control through upvotes/downvotes and reputation-based privileges to identify trusted contributors.',
         category: 'management',
       },
       {
         title: 'Real-time Notifications',
-        description: 'Instant alerts for answers, comments, mentions, and reputation changes.',
+        description: 'Socket.io-powered instant alerts for answers, comments, mentions, and reputation changes.',
         category: 'collaboration',
       },
       {
-        title: 'Search & Discovery',
-        description: 'Advanced search with filters, tag-based navigation, and personalized content recommendations.',
+        title: 'Content Moderation',
+        description: 'Robust reporting and admin system ensuring community safety and quality with flagging and review workflows.',
         category: 'management',
       },
     ],
@@ -247,8 +247,8 @@ export const projects: Project[] = [
       dataManagement: 'Complex',
       dashboard: 'Advanced',
     },
-    problemContext: 'University students lacked a centralized platform for academic collaboration, leading to repeated questions, fragmented knowledge sharing, and difficulty finding course-specific help. Facebook groups were disorganized and information was hard to retrieve.',
-    outcome: 'Platform hosts 2000+ active students with 5000+ questions answered. Average response time of 2 hours, and 90% of questions receive at least one answer. Reputation system successfully identifies top contributors who provide consistent quality help.',
+    problemContext: 'Haramaya University freshers struggled to find trustworthy guidance on university life, academics, and campus navigation. Information was scattered across disorganized Telegram groups, making it difficult for new students to get reliable answers from experienced seniors. The knowledge gap between freshers and seniors created unnecessary confusion and anxiety during the critical transition period.',
+    outcome: 'Platform successfully bridges the knowledge gap with 2000+ active students and 5000+ peer-verified answers. Average response time of 2 hours ensures freshers get timely guidance. Reputation system identifies trusted contributors, and 90% of questions receive at least one quality answer. Real-time notifications keep the community engaged and responsive.',
   },
   {
     title: 'ShopVerse – Full Stack E-commerce Platform',
