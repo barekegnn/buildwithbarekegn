@@ -55,9 +55,24 @@ export const Footer: React.FC = () => {
             <nav aria-label="Social media links">
               <ul className="space-y-2">
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">
-                    Get in Touch
-                  </Link>
+                  <a
+                    href="mailto:barekegna@gmail.com"
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                    aria-label="Email Barekegn"
+                  >
+                    barekegna@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/barekegn-asefa-346b46247"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                    aria-label="Visit Barekegn's LinkedIn profile"
+                  >
+                    LinkedIn
+                  </a>
                 </li>
                 <li>
                   <a
@@ -71,15 +86,9 @@ export const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                    aria-label="Visit Barekegn's LinkedIn profile"
-                  >
-                    LinkedIn
-                  </a>
+                  <Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors">
+                    Get in Touch
+                  </Link>
                 </li>
               </ul>
             </nav>
