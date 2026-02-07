@@ -17,6 +17,13 @@ export interface Feature {
   category: 'management' | 'collaboration' | 'analytics' | 'automation';
 }
 
+export interface DemoCredential {
+  role: string;
+  email: string;
+  password: string;
+  description: string;
+}
+
 export interface Project {
   // Basic Information
   title: string;
@@ -42,6 +49,7 @@ export interface Project {
   
   // Links
   liveDemo?: string;
+  demoCredentials?: DemoCredential[];
   github?: string;
   
   // Metrics

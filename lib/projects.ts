@@ -80,7 +80,27 @@ export const projects: Project[] = [
       'Ensuring real-time synchronization across multiple concurrent users',
       'Building comprehensive audit trails for government compliance',
     ],
-    liveDemo: 'https://government-pm-system.vercel.app',
+    liveDemo: 'https://mint-pms.vercel.app/',
+    demoCredentials: [
+      {
+        role: 'Admin',
+        email: 'admin@demo.com',
+        password: 'Admin@123',
+        description: 'Full system access with user management, project oversight, and analytics',
+      },
+      {
+        role: 'Project Manager',
+        email: 'pm@demo.com',
+        password: 'PM@123',
+        description: 'Project creation, team management, and task assignment capabilities',
+      },
+      {
+        role: 'Team Member',
+        email: 'team@demo.com',
+        password: 'Team@123',
+        description: 'Task viewing, status updates, and collaboration features',
+      },
+    ],
     github: undefined,
     complexityScore: {
       authentication: 'Advanced',
