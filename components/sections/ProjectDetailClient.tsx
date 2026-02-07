@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Button, Card, Badge } from '@/components/ui';
 import { trackExternalLink, trackCTAClick } from '@/lib/analytics';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -130,11 +131,13 @@ export function ProjectDetailClient({ project, mdxContent }: ProjectDetailClient
                 </div>
                 <p className="text-gray-400 text-sm mb-3 line-clamp-2">{dashboard.description}</p>
                 
-                <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 group-hover:border-blue-500/50 transition-all duration-200">
-                  <img 
+                <div className="relative bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 group-hover:border-blue-500/50 transition-all duration-200 aspect-video">
+                  <Image 
                     src={dashboard.imagePath} 
                     alt={dashboard.title}
-                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-200"
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-200"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               </Card>
