@@ -28,7 +28,13 @@ export const HeroSection: React.FC = () => {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
           {...getAnimationProps(fadeInUp)}
         >
-          <span className="text-gradient">Full-Stack Systems Engineer</span>
+          <span className="relative inline-block">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x bg-[length:200%_200%]">
+              Full-Stack Systems Engineer
+            </span>
+            {/* Animated glow effect */}
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 blur-2xl animate-pulse"></span>
+          </span>
           <br />
           <span className="text-foreground">& Platform Builder</span>
         </motion.h1>
