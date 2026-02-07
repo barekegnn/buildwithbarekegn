@@ -28,33 +28,33 @@ export const HeroSection: React.FC = () => {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
           {...getAnimationProps(fadeInUp)}
         >
+          <span className="text-foreground">I Build Real</span>
+          <br />
           <span className="relative inline-block">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x bg-[length:200%_200%]">
-              Full-Stack Systems Engineer
+              Operational Platforms
             </span>
             {/* Animated glow effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 blur-2xl animate-pulse"></span>
           </span>
-          <br />
-          <span className="text-foreground">& Platform Builder</span>
         </motion.h1>
+        
+        {/* Social Proof */}
+        <motion.p 
+          className="text-xl sm:text-2xl text-blue-400 font-semibold mb-8"
+          {...getAnimationProps(fadeInUp)}
+        >
+          Used by Institutions & 2,500+ Students
+        </motion.p>
         
         {/* Subtitle */}
         <motion.p 
-          className="text-xl sm:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto"
+          className="text-base sm:text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
           {...getAnimationProps(fadeInUp)}
         >
-          Building production-grade platforms with admin dashboards, analytics systems, 
-          and scalable backend architectures
-        </motion.p>
-        
-        {/* Description */}
-        <motion.p 
-          className="text-base sm:text-lg text-gray-500 mb-12 max-w-2xl mx-auto"
-          {...getAnimationProps(fadeInUp)}
-        >
-          Specialized in developing complex institutional systems that handle real-world challenges 
-          with multi-role authentication, enterprise-level data management, and comprehensive analytics
+          Full-stack systems engineer specializing in admin dashboards, 
+          multi-role backend systems, and analytics-driven platforms 
+          built for real-world operations.
         </motion.p>
         
         {/* CTA Buttons */}
