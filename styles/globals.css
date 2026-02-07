@@ -135,3 +135,35 @@ html {
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
 }
+
+/* Gradient animation for logo - left to right */
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Gradient animation for logo - right to left */
+@keyframes gradient-x-reverse {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+}
+
+.animate-gradient-x-reverse {
+  animation: gradient-x-reverse 3s ease infinite;
+}

@@ -31,8 +31,30 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center" aria-label="Barekegn Asefa - Home">
-              <span className="text-2xl font-bold text-gradient">BA</span>
+            <Link href="/" className="flex items-center group" aria-label="Barekegn Asefa - Home">
+              <div className="relative">
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
+                
+                {/* Main logo text */}
+                <div className="relative flex items-center gap-2">
+                  {/* First Name with gradient */}
+                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x">
+                    Barekegn
+                  </span>
+                  
+                  {/* Separator with pulse animation */}
+                  <span className="text-2xl font-light text-blue-500 animate-pulse">|</span>
+                  
+                  {/* Last Name with different gradient */}
+                  <span className="text-2xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x-reverse">
+                    Asefa
+                  </span>
+                </div>
+                
+                {/* Animated underline */}
+                <div className="h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+              </div>
             </Link>
           </div>
 
